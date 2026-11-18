@@ -1,0 +1,58 @@
+{
+  "comestibles": [
+    {
+      "id": 1,
+      "nombre": "Manzana Roja",
+      "categoria": "Frutas",
+      "descripcion": "Manzana fresca y crujiente por libra",
+      "precio": 1.50,
+      "cantidad": 20,
+      "imagen": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=100"
+    },
+    {
+      "id": 2,
+      "nombre": "Guineo",
+      "categoria": "Frutas",
+      "descripcion": "Racimo de guineo maduro dulce",
+      "precio": 0.80,
+      "cantidad": 35,
+      "imagen": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=100"
+    },
+    {
+      "id": 3,
+      "nombre": "Zanahoria",
+      "categoria": "Vegetales",
+      "descripcion": "Zanahoria orgánica lavada",
+      "precio": 0.65,
+      "cantidad": 15,
+      "imagen": "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=100"
+    },
+    {
+      "id": 4,
+      "nombre": "Brócoli",
+      "categoria": "Vegetales",
+      "descripcion": "Cabeza de brócoli fresco",
+      "precio": 1.20,
+      "cantidad": 10,
+      "imagen": "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?w=100"
+    },
+    {
+      "id": 5,
+      "nombre": "Papa",
+      "categoria": "Almidones",
+      "descripcion": "Papa chola ideal para freír o cocinar",
+      "precio": 0.90,
+      "cantidad": 40,
+      "imagen": "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=100"
+    },
+    {
+      "id": 6,
+      "nombre": "Arroz",
+      "categoria": "Almidones",
+      "descripcion": "Funda de arroz blanco grano largo 1kg",
+      "precio": 1.35,
+      "cantidad": 50,
+      "imagen": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=100"
+    }
+  ]
+}

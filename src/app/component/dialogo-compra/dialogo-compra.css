@@ -1,0 +1,101 @@
+
+.fondo-dialogo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.ventana-dialogo {
+    background: white;
+    width: 90%;
+    max-width: 450px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ventana-dialogo h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.producto-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.producto-info img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.producto-info h3 {
+    margin-bottom: 8px;
+}
+
+.producto-info p {
+    font-size: 13px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.producto-info span {
+    color: #198754;
+    font-weight: bold;
+}
+
+.campo-cantidad {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.campo-cantidad input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.total-compra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+.total-compra strong {
+    font-size: 22px;
+    color: #198754;
+}
+
+.btn-confirmar {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    background: #198754;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-confirmar:hover {
+    background: #146c43;
+}

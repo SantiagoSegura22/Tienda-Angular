@@ -1,0 +1,62 @@
+
+<div class="fondo-dialogo">
+
+    <div class="ventana-dialogo">
+
+        <h2>Confirmar compra</h2>
+
+        <div class="producto-info">
+
+            <img
+                [src]="producto.imagen"
+                [alt]="producto.nombre">
+
+            <div>
+                <h3>{{ producto.nombre }}</h3>
+
+                <p>{{ producto.descripcion }}</p>
+
+                <span>
+                    Precio unitario: ${{ producto.precio }}
+                </span>
+
+                <p>
+                    Stock disponible: {{ producto.cantidad }}
+                </p>
+            </div>
+
+        </div>
+
+        <div class="campo-cantidad">
+
+            <label for="cantidad">
+                ¿Cuántas unidades deseas comprar?
+            </label>
+
+            <input
+                id="cantidad"
+                type="number"
+                min="1"
+                [max]="producto.cantidad"
+                [value]="cantidad"
+                (input)="cambiarCantidad($event)">
+
+        </div>
+
+        <div class="total-compra">
+
+            <span>Total a pagar:</span>
+
+            <strong>${{ total.toFixed(2) }}</strong>
+
+        </div>
+
+        <button
+            class="btn-confirmar"
+            (click)="confirmarCompra()">
+            Confirmar compra
+        </button>
+
+    </div>
+
+</div>

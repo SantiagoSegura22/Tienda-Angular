@@ -1,0 +1,93 @@
+<div class="tienda-container">
+    <h2>Tienda Online De Comestibles</h2>
+    <!-- Segundo uso del diálogo: botón de oferta -->
+    <button class="btn-comprar" (click)="abrirOferta()">
+        Oferta del día
+    </button>
+
+    <div class="columnas-grid">
+
+        <!-- Columna Frutas -->
+        <div class="columna">
+            <h3>Frutas</h3>
+            @for (fruta of listaFrutas(); track fruta.id) {
+            <div class="tarjeta-producto">
+                <img [src]="fruta.imagen" alt="Imagen de fruta">
+                <div class="info-producto">
+                    <h4>{{ fruta.nombre }}</h4>
+                    <p class="descripcion">{{ fruta.descripcion }}</p>
+                    <div class="detalle-footer">
+                        <span class="precio">${{ fruta.precio }}</span>
+                        <span class="stock">Stock: {{ fruta.cantidad }}</span>
+                    </div>
+                    <button class="btn-comprar" (click)="abrirDialogo(fruta)">
+                        Comprar
+                    </button>
+                </div>
+            </div>
+            }
+        </div>
+
+        <!-- Columna Vegetales -->
+        <div class="columna">
+            <h3>Vegetales</h3>
+            @for (vegetal of listaVegetales(); track vegetal.id) {
+            <div class="tarjeta-producto">
+                <img [src]="vegetal.imagen" alt="Imagen de vegetal">
+                <div class="info-producto">
+                    <h4>{{ vegetal.nombre }}</h4>
+                    <p class="descripcion">{{ vegetal.descripcion }}</p>
+                    <div class="detalle-footer">
+                        <span class="precio">${{ vegetal.precio }}</span>
+                        <span class="stock">Stock: {{ vegetal.cantidad }}</span>
+                    </div>
+                    <button class="btn-comprar" (click)="abrirDialogo(vegetal)">
+                        Comprar
+                    </button>
+                </div>
+            </div>
+            }
+        </div>
+
+        <!-- Columna Almidones -->
+        <div class="columna">
+            <h3>Almidones</h3>
+            @for (almidon of listaAlmidones(); track almidon.id) {
+            <div class="tarjeta-producto">
+                <img [src]="almidon.imagen" alt="Imagen de almidón">
+                <div class="info-producto">
+                    <h4>{{ almidon.nombre }}</h4>
+                    <p class="descripcion">{{ almidon.descripcion }}</p>
+                    <div class="detalle-footer">
+                        <span class="precio">${{ almidon.precio }}</span>
+                        <span class="stock">Stock: {{ almidon.cantidad }}</span>
+                    </div>
+                    <button class="btn-comprar" (click)="abrirDialogo(almidon)">
+                        Comprar
+                    </button>
+                </div>
+            </div>
+            }
+        </div>
+
+    </div>
+</div>
+
+
+<!-- PRIMER USO: compra desde las tarjetas -->
+@if (mostrarDialogo() && productoSeleccionado()) {
+    <app-dialogo-compra
+        titulo="Confirmar compra"
+        [producto]="productoSeleccionado()!"
+        (confirmar)="recibirCompra($event)">
+    </app-dialogo-compra>
+}
+
+<!-- SEGUNDO USO: oferta del día -->
+@if (mostrarDialogoOferta() && productoOferta()) {
+    <app-dialogo-compra
+        titulo="¡Oferta del día!"
+        [producto]="productoOferta()!"
+        (confirmar)="recibirOferta($event)">
+    </app-dialogo-compra>
+}
